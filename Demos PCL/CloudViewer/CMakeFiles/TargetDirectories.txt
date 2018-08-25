@@ -1,0 +1,3 @@
+/home/nicobite/Desktop/Demos PCL/CloudViewer/CMakeFiles/rebuild_cache.dir
+/home/nicobite/Desktop/Demos PCL/CloudViewer/CMakeFiles/edit_cache.dir
+/home/nicobite/Desktop/Demos PCL/CloudViewer/CMakeFiles/cloud_viewer.dir
