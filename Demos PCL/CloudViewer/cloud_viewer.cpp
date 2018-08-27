@@ -5,8 +5,7 @@
     
 int user_data;
     
-void 
-viewerOneOff (pcl::visualization::PCLVisualizer& viewer)
+void viewerOneOff (pcl::visualization::PCLVisualizer& viewer)
 {
     viewer.setBackgroundColor (1.0, 0.5, 1.0);
     pcl::PointXYZ o;
@@ -15,11 +14,9 @@ viewerOneOff (pcl::visualization::PCLVisualizer& viewer)
     o.z = 0;
     viewer.addSphere (o, 0.25, "sphere", 0);
     std::cout << "i only run once" << std::endl;
-    
 }
     
-void 
-viewerPsycho (pcl::visualization::PCLVisualizer& viewer)
+void viewerPsycho (pcl::visualization::PCLVisualizer& viewer)
 {
     static unsigned count = 0;
     std::stringstream ss;
@@ -31,8 +28,7 @@ viewerPsycho (pcl::visualization::PCLVisualizer& viewer)
     user_data++;
 }
     
-int 
-main ()
+int main ()
 {
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZRGBA>);
     pcl::io::loadPCDFile ("my_point_cloud.pcd", *cloud);
@@ -50,6 +46,7 @@ main ()
     
     //This will get called once per visualization iteration
     viewer.runOnVisualizationThread (viewerPsycho);
+
     while (!viewer.wasStopped ())
     {
     //you can also do cool processing here
@@ -57,5 +54,6 @@ main ()
     //and you should guard against race conditions yourself...
     user_data++;
     }
+
     return 0;
 }
