@@ -6,7 +6,7 @@
 #include <iostream>		// Libreria para trabajar con flujo de entrada y de salida en c++. Las comillas son para tomar la libreria de la carpeta del proyecto.
 #include <stdio.h>	//  Libreria para trabajar con 
 #include <stdlib.h> // System("clear")
-#include <curses.h> //
+// #include <curses.h> //
 
 using namespace std; // Clase que contiene a cout y cin
 
@@ -19,25 +19,23 @@ const int NumeroFijo = 1;
 const bool BanderaTrue = true;
 const bool BanderaFalse = false;
 
+typedef unsigned int uint; // Esto permite cambiar el nombre al tipo de dato "unsigned int"
+typedef int entero; // Cambie "int" por "entero"
+
 //--------------------------------------------------main-------------------------------------------------------------
-int main()
+entero main()
 {	
 	int i = 0;
 	float Num1;
 	float Num2;
-
 	char c, b, a, s, r, m;
-
 	char v[4] = {'a','b','c','d'};
-
 	string CadenaDeCaracateres = "abcdefg";
-
 	bool bandera;
-
 	double NumeroEnorme;
 
-//--------------------Trabajo con if-------------------------------
-	/*if (Num1 > Num2)
+/*//--------------------Trabajo con if-------------------------------
+	if (Num1 > Num2)
 	{
 		cout << "Si restamos " << Num1 << " con " << Num2 << ", obtenemos: " << Resta(Num1, Num2) << "\n" << endl;
 	}
@@ -46,8 +44,9 @@ int main()
 		cout << "Los valores son iguales, la operacion no esta permitida. Por que?, porque me da la gana" << endl;
 	}
 		cout << "Si sumamos " << Num1 << " con " << Num2 << ", obtenemos: " << Suma(Num1,Num2) << "\n" << endl;*/
-//--------------------Trabajo con switch---------------------------
-/*	do
+
+/*//--------------------Trabajo con switch---------------------------
+	do
 	{	
 		// system("pause");
 		system("clear");
@@ -95,15 +94,17 @@ int main()
 			cout << "Programa Terminado. Hasta Luego!" << endl;
 
 	} while (!(b == 'b'));*/
-//--------------------Trabajo con vectores-------------------------
-	/*for(int j = 0; j < 4; j++)
+
+/*//--------------------Trabajo con vectores-------------------------
+	for(int j = 0; j < 4; j++)
 	{
 		cout << v[j]; 
 	}
 	cout << endl;*/
-//--------------------Trabijo con #define--------------------------
+
+/*//--------------------Trabijo con #define--------------------------
 	
-	/*cout << "Ingrese dos valores para operar: " << "\n" << endl;
+	cout << "Ingrese dos valores para operar: " << "\n" << endl;
 	cin >> Num1;
 	cin >> Num2;
 
@@ -112,16 +113,16 @@ int main()
 	int multiplicacion = multiplicacion(Num1,Num2);
 	int division = divisionentera(Num1,Num2);
 
-	cout << "Los resultados son los siguientes: " << "\n" << "Suma: " << suma << "\n" << "Resta: " << resta << "\n" << "Multiplicacion: " << multiplicacion << "\n" << "Division: " << division << "\n" << "Salu2!" << endl;  
-*/
-//--------------------Trabajo con estructura-----------------------
+	cout << "Los resultados son los siguientes: " << "\n" << "Suma: " << suma << "\n" << "Resta: " << resta << "\n" << "Multiplicacion: " << multiplicacion << "\n" << "Division: " << division << "\n" << "Salu2!" << endl;*/  
+
+/*//--------------------Trabajo con estructura-----------------------
 	struct Personaje
 	{
 		int edad;
 		char sexo;
 		string orientacionSexual;
 
-		Personaje() {edad = 0; sexo = 'f'; orientacionSexual = "Loquisima";}// Funcion constructora dentro de la estructura
+		Personaje() {edad = 0; sexo = 'f'; orientacionSexual = "Muy Macho";}// Funcion constructora dentro de la estructura
 		int getEdad(){return edad;}
 		char getSexo(){return sexo;}
 		string getOrientacionSexual(){return orientacionSexual;}
@@ -129,28 +130,44 @@ int main()
 		char putSexo(char m){sexo = m;}
 		string putOrientacionSexual(string OS){orientacionSexual = OS;}
 
-	}Broock, Curtis, Manuel;
+	}Broock, Curtis, Manuel, *puntero;
 	
-/*	Broock.edad = cin.get();
-	Broock.sexo = cin.get();
-	Broock.orientacionSexual = cin.get();*/
+	// Broock.edad = cin.get();
+	// Broock.sexo = cin.get();
+	// Broock.orientacionSexual = cin.get();
 
-/*	Broock.edad = 25;
-	Broock.sexo = 'M';
-	Broock.orientacionSexual = "Muy macho";*/
+	Broock.edad = 15;
+	puntero = &Broock;
 
-	char joder = cin.get();
-	Broock.putSexo(joder);
-
-/*	string gato = cin.get();
-	Broock.putOrientacionSexual(gato);
-	string perro = Broock.getOrientacionSexual();*/
+	cout << puntero << endl;
+	cout << &Broock.edad << endl;
+	cout << puntero->edad << endl; // Forma de apuntar a una variable dentro de la estructura
 
 
+	cout << "Ingrese el la edad, el sexo y la orintacion sexual de Broock: " << "\n" << endl;
 
-	cout << Broock.edad << "\n" << Broock.sexo << "\n" << Broock.orientacionSexual << endl;
+	int joder1;
+	cin >> joder1;
+	Broock.putEdad(joder1);
+
+	char joder2;
+	cin >> joder2;
+	Broock.putSexo(joder2);
+
+	cout << "\n" << "La edad de Broock es: " << Broock.edad << "\n" << "El sexo de Broock es: " << Broock.sexo << "\n" << "La orientacion sexual de Broock es : " << Broock.orientacionSexual << endl;
+	system ("pause");*/
+
+/*//--------------------Trabajo con punteros basico -----------------
+	int array[5];
+	int *p;
+	
+	p = array; // 
+	cout << "direccion array[0] " << &array << endl;
+	cout << "puntero " << p << endl;
+	system ("pause");*/
 
 }
+
 // -----------------------------------------------------Funciones -----------------------------------------------------
 
 float Suma(float a, float b)
