@@ -1,0 +1,2 @@
+tesis_package
+-DCATKIN_DEVEL_PREFIX=/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/install -G Unix Makefiles

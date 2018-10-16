@@ -1,0 +1,8 @@
+prefix=/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/install
+
+Name: tesis_package
+Description: Description of tesis_package
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/install/lib 
+Requires: 
