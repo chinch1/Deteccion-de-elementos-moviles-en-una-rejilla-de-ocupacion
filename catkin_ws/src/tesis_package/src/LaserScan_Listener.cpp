@@ -2,28 +2,24 @@
 #include <string.h>
 #include "sensor_msgs/LaserScan.h"
 #include "std_msgs/Header.h"
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <sstream>
 
-// #include <std_msgs/Int8.h>
-// #include <std_msgs/Int16.h>
-// #include <std_msgs/Int32.h>
-// #include <std_msgs/Int64.h>
-
-// #include <std_msgs/UInt8.h>
-// #include <std_msgs/Uint16.h>
-// #include <std_msgs/Uint32.h>
-
-// #include <std_msgs/FLoat32.h>
-// #include <std_msgs/Float64.h>
-
-// #include <std_msgs/UInt8MultiArray.h>
-
-// #include <std_msgs/Time.h>
-// #include <std_msgs/Bool.h>
- 
 using namespace ros;
+using namespace std;
 
-void laserScancallback(const sensor_msgs::LaserScan::ConstPtr& msg)
-{
+struct myLaserscan {
+  vector<char> myRanges;
+  vector<char> vmyIntensities;
+
+} ;
+
+product apple;
+product banana, melon
+  
+void laserScancallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
 
   sensor_msgs::LaserScan data = *msg; // La funcion callback de ROS guarda la data cruda en la memoria, por lo tanto para extraerla hay que apuntar a la direccion de memoria.
 
@@ -32,7 +28,7 @@ void laserScancallback(const sensor_msgs::LaserScan::ConstPtr& msg)
   divididos entre los tipos string, uint y float.
   
   uint32 seq
-  time stamp       <------- Segundos, concatenados con nanosegundos 
+  time stamp     <------- Segundos, concatenados con nanosegundos 
   string frame_id
 
   float32 angle_min
@@ -46,21 +42,36 @@ void laserScancallback(const sensor_msgs::LaserScan::ConstPtr& msg)
   float32[] intensities
   */
 
-// Ahora imprimimos la data para visualizarla
-  ROS_INFO(" \n\n I'm receiving from LaserScan: \n\n seq: %d \n stamp: %d \n frame_id: %s \n angle_min: %f \n angle_max: %f \n angle_increment: %f \n time_increment: %f \n scan_time: %f \n range_min: %f \n range_max: %f \n ranges: %f \n intensities: %f", 
+
+  ROS_INFO(" \n\n I'm receiving from LaserScan: \n\n seq: %d \n stamp: %d \n frame_id: %s \n angle_min: %f \n angle_max: %f \n angle_increment: %f \n time_increment: %f \n scan_time: %f \n range_min: %f \n range_max: %f \n ", 
                                                                                        data.header.seq, data.header.stamp, data.header.frame_id.c_str(), data.angle_min, 
                                                                                        data.angle_max, data.angle_increment, data.time_increment, data.scan_time,
-                                                                                       data.range_min, data.range_max, data.ranges, data.intensities);
+                                                                                       data.range_min, data.range_max);
+
+  ROS_INFO("ranges: \n");
+
+  for(int i = 0; i < data.ranges.size(); i++) {
+
+    cout << data.ranges[i] << ", " ; 
+
+  }
+
+  ROS_INFO("intensities: \n");
+
+  for(int j = 0; j < data.intensities.size(); j++) {
+    cout << data.intensities[j] << ", " ;
+  }   
+
+  ROS_INFO("degrees: \n");
+
+  // for(int j = 0; j < data.intensities.size(); j++)
+  // {
+  //   std::cout << data.intensities[j] << ", " ;
+  // } 
+
 }
 
-/*void dataRestructuring(const sensor_msgs::LaserScan::ConstPtr& msg)//---------------------------------------------------
-{
-  sensor_msgs::PointCloud2 data = *msg;
-
-}*/
-                                                        
-int main(int argc, char **argv)//--------------------------------------------
-{
+int main(int argc, char **argv) {
   init(argc, argv, "LaserScan_Listener"); // Funcion de ROS que inicializa el nodo que vamos a lanzar
 
   NodeHandle n; // Declaracion del nodo a utilizar para la comunicacion

@@ -6,19 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/OccupancyGrid.cpp
+/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/OccupancyGrid2.cpp
 ros/ros.h
 /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/ros/ros.h
-string.h
--
 nav_msgs/OccupancyGrid.h
 /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/nav_msgs/OccupancyGrid.h
 std_msgs/Header.h
 /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/std_msgs/Header.h
-stdlib.h
--
-iostream
--
+nav_msgs/MapMetaData.h
+/home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/nav_msgs/MapMetaData.h
 
 /opt/ros/kinetic/include/geometry_msgs/Point.h
 string

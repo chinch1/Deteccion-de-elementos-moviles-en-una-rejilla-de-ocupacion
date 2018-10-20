@@ -111,17 +111,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -376,6 +376,21 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+tesis_package/CMakeFiles/OccupancyGrid2.dir/rule:
+	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tesis_package/CMakeFiles/OccupancyGrid2.dir/rule
+.PHONY : tesis_package/CMakeFiles/OccupancyGrid2.dir/rule
+
+# Convenience name for target.
+OccupancyGrid2: tesis_package/CMakeFiles/OccupancyGrid2.dir/rule
+
+.PHONY : OccupancyGrid2
+
+# fast build rule for target.
+OccupancyGrid2/fast:
+	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f tesis_package/CMakeFiles/OccupancyGrid2.dir/build.make tesis_package/CMakeFiles/OccupancyGrid2.dir/build
+.PHONY : OccupancyGrid2/fast
+
+# Convenience name for target.
 tesis_package/CMakeFiles/LaserScan_Listener.dir/rule:
 	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 tesis_package/CMakeFiles/LaserScan_Listener.dir/rule
 .PHONY : tesis_package/CMakeFiles/LaserScan_Listener.dir/rule
@@ -519,6 +534,33 @@ src/OccupancyGrid.cpp.s:
 	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f tesis_package/CMakeFiles/OccupancyGrid.dir/build.make tesis_package/CMakeFiles/OccupancyGrid.dir/src/OccupancyGrid.cpp.s
 .PHONY : src/OccupancyGrid.cpp.s
 
+src/OccupancyGrid2.o: src/OccupancyGrid2.cpp.o
+
+.PHONY : src/OccupancyGrid2.o
+
+# target to build an object file
+src/OccupancyGrid2.cpp.o:
+	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f tesis_package/CMakeFiles/OccupancyGrid2.dir/build.make tesis_package/CMakeFiles/OccupancyGrid2.dir/src/OccupancyGrid2.cpp.o
+.PHONY : src/OccupancyGrid2.cpp.o
+
+src/OccupancyGrid2.i: src/OccupancyGrid2.cpp.i
+
+.PHONY : src/OccupancyGrid2.i
+
+# target to preprocess a source file
+src/OccupancyGrid2.cpp.i:
+	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f tesis_package/CMakeFiles/OccupancyGrid2.dir/build.make tesis_package/CMakeFiles/OccupancyGrid2.dir/src/OccupancyGrid2.cpp.i
+.PHONY : src/OccupancyGrid2.cpp.i
+
+src/OccupancyGrid2.s: src/OccupancyGrid2.cpp.s
+
+.PHONY : src/OccupancyGrid2.s
+
+# target to generate assembly for a file
+src/OccupancyGrid2.cpp.s:
+	cd /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/build && $(MAKE) -f tesis_package/CMakeFiles/OccupancyGrid2.dir/build.make tesis_package/CMakeFiles/OccupancyGrid2.dir/src/OccupancyGrid2.cpp.s
+.PHONY : src/OccupancyGrid2.cpp.s
+
 src/PointCloud2_Listener.o: src/PointCloud2_Listener.cpp.o
 
 .PHONY : src/PointCloud2_Listener.o
@@ -611,6 +653,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -625,6 +668,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
+	@echo "... OccupancyGrid2"
 	@echo "... LaserScan_Listener"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -632,13 +676,15 @@ help:
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... OccupancyGrid"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... src/LaserScan_Listener.o"
 	@echo "... src/LaserScan_Listener.i"
 	@echo "... src/LaserScan_Listener.s"
 	@echo "... src/OccupancyGrid.o"
 	@echo "... src/OccupancyGrid.i"
 	@echo "... src/OccupancyGrid.s"
+	@echo "... src/OccupancyGrid2.o"
+	@echo "... src/OccupancyGrid2.i"
+	@echo "... src/OccupancyGrid2.s"
 	@echo "... src/PointCloud2_Listener.o"
 	@echo "... src/PointCloud2_Listener.i"
 	@echo "... src/PointCloud2_Listener.s"

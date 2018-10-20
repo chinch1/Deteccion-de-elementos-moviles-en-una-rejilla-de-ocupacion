@@ -15,6 +15,14 @@ sensor_msgs/LaserScan.h
 /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/sensor_msgs/LaserScan.h
 std_msgs/Header.h
 /home/nicobite/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws/src/tesis_package/src/std_msgs/Header.h
+iostream
+-
+vector
+-
+cstdlib
+-
+sstream
+-
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h

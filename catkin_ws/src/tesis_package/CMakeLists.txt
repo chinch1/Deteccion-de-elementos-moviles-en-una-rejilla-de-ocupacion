@@ -137,7 +137,7 @@ include_directories(
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
+## target back to the shorter version for ease of user use/Desktop/Tesis/Deteccion-de-elementos-moviles-en-una-rejilla-de-ocupacion/catkin_ws
 ## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
 # set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
@@ -217,3 +217,7 @@ add_dependencies(LaserScan_Listener beginner_tutorials_generate_messages_cpp)
 add_executable(OccupancyGrid src/OccupancyGrid.cpp)
 target_link_libraries(OccupancyGrid ${catkin_LIBRARIES})
 add_dependencies(OccupancyGrid beginner_tutorials_generate_messages_cpp)
+
+add_executable(OccupancyGrid2 src/OccupancyGrid2.cpp)
+target_link_libraries(OccupancyGrid2 ${catkin_LIBRARIES})
+add_dependencies(OccupancyGrid2 beginner_tutorials_generate_messages_cpp)

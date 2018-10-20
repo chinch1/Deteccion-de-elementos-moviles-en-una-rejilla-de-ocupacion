@@ -2,6 +2,8 @@
 #include <string.h>
 #include "nav_msgs/OccupancyGrid.h"
 #include "std_msgs/Header.h"
+#include <stdlib.h>
+# include <iostream>
 
 using namespace ros;
 using namespace std;
@@ -38,15 +40,15 @@ int main(int argc, char **argv)//-----------------------------------------------
   NodeHandle n;
 
   Publisher mapPublication = n.advertise<nav_msgs::OccupancyGrid>("mapPub", 1000);
-  
-  /*int p[] = {100, 100, 50, 0};
-  vector<signed char> a(p, p+4);*/
-
   nav_msgs::OccupancyGrid map;
 
-/*  map.info.resolution = 1.0;
-  map.info.width = 2;
-  map.info.height = 2;
+  int size;
+  int i = 0; 
+  
+
+  map.info.resolution = 0.1;
+  map.info.width = 100;
+  map.info.height = 100;
   map.info.origin.position.x = 0.0;
   map.info.origin.position.y = 0.0;
   map.info.origin.position.z = 0.0;
@@ -54,14 +56,26 @@ int main(int argc, char **argv)//-----------------------------------------------
   map.info.origin.orientation.y = 0.0;
   map.info.origin.orientation.z = 0.0;
   map.info.origin.orientation.w = 0.0;
-  map.data = a;*/
-
+  
   map.header.frame_id = "map";
 
-  Rate loop_rate(1);
+  size = map.info.width*map.info.height;
+  std::vector<signed char> mapProbs(size);
+
+  Rate loop_rate(10);
 
   while(ok())
   {
+
+  for(int i =0; i < size; i++)
+  {
+    mapProbs[i] = rand() % 100 + 1;
+  }
+
+  //std::fill(mapProbs.begin(), mapProbs.end(), a);
+   
+  map.data = mapProbs;
+
   mapPublication.publish(map);
 
   spinOnce();
