@@ -10,14 +10,14 @@
 using namespace ros;
 using namespace std;
 
-struct myLaserscan {
+/*struct myLaserscan {
   vector<char> myRanges;
   vector<char> vmyIntensities;
 
 } ;
 
 product apple;
-product banana, melon
+product banana, melon*/
   
 void laserScancallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
 
