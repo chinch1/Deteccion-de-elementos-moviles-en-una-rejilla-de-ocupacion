@@ -5,5 +5,11 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(velodyne-master/velodyne)
+subdirs(velodyne-master/velodyne_msgs)
 subdirs(tesis_package)
 subdirs(occupancy_grid_kinetic)
+subdirs(pointcloud_to_laserscan)
+subdirs(velodyne-master/velodyne_driver)
+subdirs(velodyne-master/velodyne_laserscan)
+subdirs(velodyne-master/velodyne_pointcloud)
