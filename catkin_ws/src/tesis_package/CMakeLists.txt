@@ -221,3 +221,4 @@ add_dependencies(OccupancyGrid beginner_tutorials_generate_messages_cpp)
 add_executable(OccupancyGrid2 src/OccupancyGrid2.cpp)
 target_link_libraries(OccupancyGrid2 ${catkin_LIBRARIES})
 add_dependencies(OccupancyGrid2 beginner_tutorials_generate_messages_cpp)
+

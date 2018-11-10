@@ -19,6 +19,11 @@ velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/Velodyn
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/config_init_mutex.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/config_tools.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/dynamic_reconfigure/server.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/nav_msgs/MapMetaData.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/nav_msgs/OccupancyGrid.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/ros/assert.h
@@ -81,6 +86,8 @@ velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/Velodyn
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/sensor_msgs/impl/point_cloud2_iterator.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/sensor_msgs/point_cloud2_iterator.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/std_msgs/Int8.h
+velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/std_msgs/String.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 velodyne-master/velodyne_laserscan/CMakeFiles/velodyne_laserscan.dir/src/VelodyneLaserScan.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h
 
